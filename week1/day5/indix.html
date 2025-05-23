@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coloring Squares</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    #colorPalette {
+      display: grid;
+      grid-template-columns: repeat(5, 40px);
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    .color {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .color.selected {
+      border: 4px solid black;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(20, 25px);
+      grid-template-rows: repeat(20, 25px);
+      gap: 2px;
+      justify-content: center;
+    }
+.square {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  user-select: none;         
+  -webkit-user-select: none;  
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Coloring Squares</h1>
+
+  <p>Select a color and draw by clicking and dragging!</p>
+
+  <div id="colorPalette"></div>
+
+  <div id="grid"></div>
+
+  <script src="coloring.js"></script>
+</body>
+</html>

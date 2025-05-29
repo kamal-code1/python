@@ -1,0 +1,33 @@
+CREATE DATABASE bootcamp;
+USE bootcamp;
+
+CREATE TABLE students (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  last_name VARCHAR(50),
+  first_name VARCHAR(50),
+  birth_date DATE
+);
+
+INSERT INTO students (id, first_name, last_name, birth_date) VALUES
+(1, 'Marc', 'Benichou', STR_TO_DATE('02/11/1998', '%d/%m/%Y')),
+(2, 'Yoan', 'Cohen', STR_TO_DATE('03/12/2010', '%d/%m/%Y')),
+(3, 'Lea', 'Benichou', STR_TO_DATE('27/07/1987', '%d/%m/%Y')),
+(4, 'Amelia', 'Dux', STR_TO_DATE('07/04/1996', '%d/%m/%Y')),
+(5, 'David', 'Grez', STR_TO_DATE('14/06/2003', '%d/%m/%Y')),
+(6, 'Omer', 'Simpson', STR_TO_DATE('03/10/1980', '%d/%m/%Y'));
+
+INSERT INTO students (first_name, last_name, birth_date) VALUES ('VotrePrenom', 'VotreNom', STR_TO_DATE('JJ/MM/AAAA', '%d/%m/%Y'));
+
+SELECT * FROM students;
+
+SELECT first_name, last_name FROM students;
+
+SELECT first_name, last_name FROM students WHERE id = 2;
+
+SELECT first_name, last_name FROM students WHERE last_name = 'Benichou' AND first_name = 'Marc';
+
+SELECT first_name, last_name FROM students WHERE last_name = 'Benichou' OR first_name = 'Marc';
+
+SELECT first_name, last_name FROM students WHERE first_name LIKE '%a%'
+
+

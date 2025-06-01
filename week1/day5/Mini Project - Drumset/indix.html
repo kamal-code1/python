@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Drumset</title>
+  <style>
+    .drum {
+      font-size: 2rem;
+      padding: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border: 2px solid #333;
+      border-radius: 8px;
+    .user-select-none {
+  -webkit-user-select: none; 
+  user-select: none;         
+}
+
+      display: inline-block;
+      width: 80px;
+      text-align: center;
+      background: #eee;
+      transition: background 0.2s;
+    }
+    .drum:active, .drum.playing {
+      background: #ccc;
+      box-shadow: 0 0 15px #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <button class="drum" data-key="w">W</button>
+    <button class="drum" data-key="a">A</button>
+    <button class="drum" data-key="s">S</button>
+    <button class="drum" data-key="d">D</button>
+    <button class="drum" data-key="j">J</button>
+    <button class="drum" data-key="k">K</button>
+    <button class="drum" data-key="l">L</button>
+  
+  <audio data-key="w" src="sounds/crash.mp3"></audio>
+  <audio data-key="a" src="sounds/kick-bass.mp3"></audio>
+  <audio data-key="s" src="sounds/snare.mp3"></audio>
+  <audio data-key="d" src="sounds/tom-1.mp3"></audio>
+  <audio data-key="j" src="sounds/tom-2.mp3"></audio>
+  <audio data-key="k" src="sounds/tom-3.mp3"></audio>
+  <audio data-key="l" src="sounds/tom-4.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
